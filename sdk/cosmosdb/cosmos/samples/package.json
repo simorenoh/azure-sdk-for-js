@@ -10,6 +10,7 @@
     "UserManagement": "npx ts-node ./UserManagement",
     "ServerSideScripts": "npx ts-node ./ServerSideScripts",
     "ItemManagement": "npx ts-node ./ItemManagement",
+    "SimonTest": "npx ts-node ./src/SimonTest.ts",
     "DatabaseManagement": "npx ts-node ./DatabaseManagement",
     "IndexManagement": "npx ts-node ./IndexManagement",
     "ChangeFeed": "npx ts-node ./ChangeFeed",

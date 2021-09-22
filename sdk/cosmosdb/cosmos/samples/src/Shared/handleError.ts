@@ -3,7 +3,7 @@
 import { database, key, endpoint } from "./config";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import { CosmosClient } from "../../dist";
+import { CosmosClient } from "../../..";
 
 const client = new CosmosClient({ endpoint, key });
 
