@@ -42,7 +42,7 @@ export default function createClient(
   endpoint: string,
   credential: TokenCredential | MyServiceKeyCredential,
   options: ClientOptions = {}
-): GeneratedClient {
+): MyServiceClient {
   if (isTokenCredential(credential)) {
     return MyServiceClient(endpoint, credential, options);
   } else {
@@ -121,7 +121,8 @@ Here is an example implementation. Remember to replace the `paginationMapping` w
 
 ```typescript
 import { Client, createRestError, PathUncheckedResponse } from "@azure-rest/core-client";
-import { PaginateReturn, PagingOptions, getPagedAsyncIterator, PagedAsyncIterableIterator, PagedResult } from "./generated/paginateHelper";
+import { PaginateReturn, PagingOptions, PagedAsyncIterableIterator } from "./generated/paginateHelper";
+import { getPagedAsyncIterator, PagedResult } from "@azure/core-paging";
 
 export function paginate<TResponse extends PathUncheckedResponse>(
   client: Client,
